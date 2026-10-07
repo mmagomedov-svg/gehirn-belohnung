@@ -13,7 +13,6 @@ app = Flask(__name__, static_folder="../static", static_url_path="/static")   # 
 NAV = [
     ("praesentation", "Präsentation"),
     ("video", "Video"),
-    ("quiz", "Quiz"),
     ("vorlesen", "Text zum Vorlesen"),
     ("antworten", "Arbeitsblatt-Antworten"),
     ("erklaerung", "Einfach erklärt"),
@@ -35,11 +34,6 @@ def praesentation():
 @app.route("/video")
 def video():
     return render_template("video.html", active="video")
-
-
-@app.route("/quiz")
-def quiz():
-    return render_template("quiz.html", active="quiz")
 
 
 @app.route("/vorlesen")

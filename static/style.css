@@ -280,6 +280,12 @@ html.nofs { overflow:hidden; }
 .vbox { position:relative; border-radius:22px; overflow:hidden; background:#000; aspect-ratio:16/9; box-shadow:0 18px 44px rgba(27,24,56,.28); }
 .vbox video { width:100%; height:100%; display:block; }
 .vbox .vnote { top:14px; left:14px; font-size:14.5px; }
+.dia { display:grid; grid-template-columns:minmax(0, 250px) 1fr; gap:16px; align-items:start; background:#fff; border:2px solid #E3E0F5; border-radius:16px; padding:12px 14px; margin:12px 0 0; }
+.dia .pic svg { display:block; width:100%; height:auto; border-radius:10px; }
+.dia b { display:block; font-size:14px; letter-spacing:.02em; color:#5B2BD1; margin:2px 0 4px; }
+.dia p { margin:0; font-size:16.5px; max-width:none; }
+@media (max-width:640px) { .dia { grid-template-columns:1fr; } .dia .pic { max-width:320px; } }
+@media print { .dia { break-inside:avoid; } }
 .quiz { background:#1B1838; color:#fff; border-radius:28px; padding:26px 28px 30px; }
 .qtop { display:flex; justify-content:space-between; font-size:15px; font-weight:700; color:#CFC3FF; }
 .qbar { height:10px; border-radius:99px; background:rgba(255,255,255,.16); margin:10px 0 22px; overflow:hidden; } .qbar i { display:block; height:100%; border-radius:99px; background:linear-gradient(90deg, #FF4FA3, #FFD23F, #B6F36A); transition:width .3s; }
