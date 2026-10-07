@@ -1,13 +1,13 @@
 """Gehirn und Belohnung – Präsentation von Gruppe 1 als kleine Flask-App.
 
-Starten:
+Starten (im Ordner flask_app):
     pip install flask
     python app.py
 Dann im Browser öffnen: http://127.0.0.1:5000
 """
 from flask import Flask, render_template
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder="../static", static_url_path="/static")   # static/ liegt eine Ebene höher
 
 # Knöpfe oben auf jeder Seite: (Name der Funktion unten, Text auf dem Knopf)
 NAV = [
